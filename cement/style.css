@@ -1,0 +1,338 @@
+:root {
+    --bg-color: #f4f4f2;
+    --panel-bg: #ffffff;
+    --text-main: #2b2b2b;
+    --text-sub: #666666;
+    --accent: #7a828a;
+    --border-color: #d1d5db;
+    --cement-light: #e5e7eb;
+    --cement-dark: #4b5563;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+/* ヘッダーデザイン */
+header {
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+    border-bottom: 2px solid var(--border-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--cement-dark);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.header-container p {
+    font-size: 1rem;
+    color: var(--text-sub);
+    letter-spacing: 0.05em;
+}
+
+/* ナビゲーションタブ */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--panel-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-sub);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 0.05em;
+}
+
+.tab-button:hover {
+    color: var(--text-main);
+    background-color: rgba(0,0,0,0.02);
+}
+
+.tab-button.active {
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cement-dark);
+}
+
+/* メインコンテンツ枠 */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--cement-dark);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid var(--cement-dark);
+    letter-spacing: 0.05em;
+}
+
+/* --- タブ1: ホームページ用スタイル --- */
+.profile-section {
+    background-color: var(--panel-bg);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .profile-layout { grid-template-columns: 1fr; text-align: center; }
+    .profile-img { margin: 0 auto; }
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    background-color: var(--cement-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+}
+
+.news-list {
+    list-style: none;
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.news-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 20px;
+}
+
+.news-item:last-child { border-bottom: none; }
+.news-date { font-weight: bold; color: var(--accent); min-width: 100px; }
+
+/* --- タブ2: 商品紹介ページ用スタイル --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 240px;
+    background-color: var(--cement-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sub);
+}
+
+.product-info { padding: 20px; }
+.product-title { font-size: 1.1rem; font-weight: 500; margin-bottom: 8px; }
+.product-desc { font-size: 0.9rem; color: var(--text-sub); margin-bottom: 12px; }
+.product-tag {
+    display: inline-block;
+    background-color: var(--cement-light);
+    color: var(--cement-dark);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+
+/* --- タブ3: 商品購入ページ用スタイル --- */
+.shop-section {
+    background-color: var(--panel-bg);
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.shop-intro { max-width: 600px; margin: 0 auto 40px auto; color: var(--text-sub); }
+.shop-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.shop-button {
+    display: block;
+    padding: 20px;
+    background-color: var(--panel-bg);
+    border: 2px solid var(--cement-dark);
+    color: var(--cement-dark);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: var(--cement-dark);
+    color: #ffffff;
+}
+
+.shop-notice {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    text-align: left;
+}
+
+.product-image {
+    width: 100%;
+    height: 240px; /* 前回のプレースホルダーと同じ高さ */
+    object-fit: cover; /* 画像の比率を保ったまま枠いっぱいに表示 */
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* プロフィール画像を丸く、枠いっぱいに表示する設定 */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 枠を丸くする */
+    overflow: hidden;    /* 枠からはみ出た画像を切る */
+    background-color: var(--cement-light); /* 画像がない時の背景色 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--panel-bg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);[cite: 3]
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を歪ませずに枠にフィットさせる */
+}
+
+/* SNSボタンの親要素（外枠） */
+.profile-sns {
+    border: 1px solid var(--border-color); /* 全体の外枠 */
+    background-color: var(--panel-bg);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 150px; /* 画像の幅に合わせる */
+    overflow: hidden; /* 角丸からはみ出すホバー背景をカット */
+}
+
+/* ボタン自体の調整 */
+.sns-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 中身を中央揃えに */
+    gap: 6px; /* アイコンと文字の間隔をタイトに */
+    padding: 10px 0; /* 左右の余白を削り、上下だけで高さを調整 */
+    font-size: 1.0rem;
+    text-decoration: none;[cite: 3]
+    color: var(--cement-dark);
+    /* ボタン個別の枠線は削除して外枠と統合 */
+    border: none; 
+    border-bottom: 1px solid var(--border-color); /* ボタンの間の区切り線 */
+    transition: 0.2s;
+}
+
+/* 最後のボタンだけ下の区切り線を消す */
+.sns-button:last-child {
+    border-bottom: none;
+}
+
+/* ホバー演出（外枠とぴったり重なるように） */
+.sns-button:hover {
+    background-color: var(--cement-dark);
+    color: #ffffff;
+    /* transform: translateY は外枠からはみ出すので削除 */
+}
+
+/* アイコン画像のサイズ */
+.sns-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+footer { text-align: center; padding: 30px; color: var(--text-sub); font-size: 0.8rem; }
