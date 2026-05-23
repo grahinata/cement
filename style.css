@@ -1,417 +1,375 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Products - Creator's Portfolio</title>
-    <link rel="icon" href="img/food/top.jpg" type="image/png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <h1>プロの寝坊助ひなち🐣‪</h1>
-            <p>Handmade Atelier & Portfolio</p>
-        </div>
-    </header>
-    <nav>
-        <a href="index.html" class="tab-button">ホームページ</a>
-        <a href="products.html" class="tab-button active">作品紹介</a>
-        <a href="purchase.html" class="tab-button">商品購入</a>
-    </nav>
+:root {
+    --bg-color: #f4f4f2;
+    --panel-bg: #ffffff;
+    --text-main: #2b2b2b;
+    --text-sub: #666666;
+    --accent: #7a828a;
+    --border-color: #d1d5db;
+    --cement-light: #e5e7eb;
+    --cement-dark: #4b5563;
+}
 
-    <main class="container">
-        <h2>作品ギャラリー</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="img/food/top.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">伝説のセメントケーキ</h3>
-                    <p class="product-desc">原点にして頂点．このセメント物語の始まりである諸悪の根源．</br>もとはレアチーズオレオケーキだそうです．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-            <div class="product-card">
-                <img src="img/people/01.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">仕入れ中の職人</h3>
-                    <p class="product-desc">匠が素敵な作品を生み出すためにはまず、良質なセメントを確保するところからです．職人の朝ははやいですね．</p>
-                    <span class="product-tag">ピープル</span>
-                </div>
-            </div>
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
 
-            <div class="product-card">
-                <img src="img/people/05.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">仕込み中の職人</h3>
-                    <p class="product-desc">セメントを混ぜている職人．セメントへの愛が口元からあふれていますね...</p>
-                    <span class="product-tag">ピープル</span>
-                </div>
-            </div>
+/* ヘッダーデザイン */
+header {
+    /* 画像を背景に指定し、中央に配置して全体を覆う設定 */
+    background: url('img/marble.jpg') no-repeat center center;
+    background-size: cover; 
+    
+    border-bottom: 2px solid var(--border-color);
+    padding: 60px 20px;
+    text-align: center;
+    /* 文字を読みやすくするために少し影を落とす（任意） */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); 
+}
 
-            <div class="product-card">
-                <img src="img/people/02.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">焼きを入れてる職人</h3>
-                    <p class="product-desc">セメントケーキに次ぐ名作、セメントパン．製作中の真剣なまなざしをご覧あれ．</p>
-                    <span class="product-tag">ピープル</span>
-                </div>
-            </div>
+.header-container h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--cement-dark);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
 
-            <div class="product-card">
-                <img src="img/food/top2.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">伝説のセメントケーキ（リメイク）</h3>
-                    <p class="product-desc">伝説のあの問題作をスタッフがリメイクしてみました！！</br>彩を加えて生まれ変わった姿をご覧あれ！．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.header-container p {
+    font-size: 1rem;
+    color: var(--text-sub);
+    letter-spacing: 0.05em;
+}
 
-            <div class="product-card">
-                <img src="img/food/03.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ひなたの晩酌</h3>
-                    <p class="product-desc">なんということでしょう、ただの晩酌風景が匠の手によって芸術になってしまいました．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* ナビゲーションタブ */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--panel-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
 
-            <div class="product-card">
-                <img src="img/food/04.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントチャーハン</h3>
-                    <p class="product-desc">ひなた作のチャーハン、当然のようにセメントにされてしまいました．</br>チャーハンすらも許されないんですね．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.tab-button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-sub);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    letter-spacing: 0.05em;
+}
 
-            <div class="product-card">
-                <img src="img/food/05.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントクロワッサン</h3>
-                    <p class="product-desc">ひなた作のクロワッサン．そうですよね、当然セメントになります．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.tab-button:hover {
+    color: var(--text-main);
+    background-color: rgba(0,0,0,0.02);
+}
 
-            <div class="product-card">
-                <img src="img/food/06.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ラーメンセット</h3>
-                    <p class="product-desc">なんかセメントになる前まではすごいおいしそうだったんですけどね．んまあ、これもしゃーないよね(^_-)</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.tab-button.active {
+    color: var(--text-main);
+    font-weight: bold;
+}
 
-            <div class="product-card">
-                <img src="img/food/07.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントたこ焼き</h3>
-                    <p class="product-desc">最初見たときびっくりしましたよ？なんか月でも焼いてるんかと思ったわ．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--cement-dark);
+}
 
-            <div class="product-card">
-                <img src="img/people/03.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">プロの寝坊助</h3>
-                    <p class="product-desc">寝坊してしまった職人．まぁそういうときもありますよね．いつもお疲れ様です．</p>
-                    <span class="product-tag">ピープル</span>
-                </div>
-            </div>
+/* メインコンテンツ枠 */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-            <div class="product-card">
-                <img src="img/food/08.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントステーキ</h3>
-                    <p class="product-desc">す、すごいおいしそうなステーキですね．嚙み切れればの話ですが．あはは</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
 
-            <div class="product-card">
-                <img src="img/food/09.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントハンバーグ</h3>
-                    <p class="product-desc">おいしそうだった定食ですね．なんかセメントになってから色が単調というかなんというか．ひなた野菜ちゃんと食べようね？？</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.tab-content.active {
+    display: block;
+}
 
-            <div class="product-card">
-                <img src="img/food/10.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントクッキー</h3>
-                    <p class="product-desc">これは唯一セメント化してもあんま違和感なかった一品ですね．ちょっと焼きすぎたのかな？ぐらい．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-            <div class="product-card">
-                <img src="img/food/11.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">チョコチップクッキー</h3>
-                    <p class="product-desc">なんか、うん、まあ．これチョコチップか？石じゃね？？</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--cement-dark);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid var(--cement-dark);
+    letter-spacing: 0.05em;
+}
 
-            <div class="product-card">
-                <img src="img/food/12.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">トウモロコシパン</h3>
-                    <p class="product-desc">セメント化したトウモロコシパンです．これ最初見たときゴジラの背中かと思ったわ．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* --- タブ1: ホームページ用スタイル --- */
+.profile-section {
+    background-color: var(--panel-bg);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
 
-            <div class="product-card">
-                <img src="img/food/13.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントラーメン</h3>
-                    <p class="product-desc">ラーメンやね、うん．これ海苔どうなってんの？分厚くねwww</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.profile-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+    align-items: center;
+}
 
-            <div class="product-card">
-                <img src="img/food/14.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ピクニック～セメントを添えて～</h3>
-                    <p class="product-desc">たまにはお外でピクニックするのも開放的でいいですよね．そんな時でもセメントはついてきます．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+@media (max-width: 600px) {
+    .profile-layout { grid-template-columns: 1fr; text-align: center; }
+    .profile-img { margin: 0 auto; }
+}
 
-            <div class="product-card">
-                <img src="img/food/34.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ホテルの朝食ビュッフェ</h3>
-                    <p class="product-desc">おいしそうだった朝食が一瞬でこの通り！！てか朝からこの量いけるのすごくね？割と結構尊敬なう．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.profile-img {
+    width: 150px;
+    height: 150px;
+    background-color: var(--cement-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+}
 
-            <div class="product-card">
-                <img src="img/food/01.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ス〇バのセット</h3>
-                    <p class="product-desc">某ス〇バのドリンクセットが匠の手によってなんということでしょう、セメント仕様になってしまいました．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.news-list {
+    list-style: none;
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
 
-            <div class="product-card">
-                <img src="img/food/02.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ス〇バのドリンク</h3>
-                    <p class="product-desc">某ス〇バのドリンクが匠の手によってなんということでしょう、セメント仕様になってしまいました．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.news-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 20px;
+}
 
-            <div class="product-card">
-                <img src="img/food/15.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">軽食</h3>
-                    <p class="product-desc">なんか確か朝ごはんだっけ？のやつですね．なんか気づいたら食べ物だけじゃなくて缶ごとセメントにしてら．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.news-item:last-child { border-bottom: none; }
+.news-date { font-weight: bold; color: var(--accent); min-width: 100px; }
 
-            <div class="product-card">
-                <img src="img/food/16.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">K〇C</h3>
-                    <p class="product-desc">これはセメントにできる部分が少なくて残念でしたね．包装をとってから写真撮れよbyスタッフ</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* --- タブ2: 商品紹介ページ用スタイル --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
 
-            <div class="product-card">
-                <img src="img/people/06.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ひな鳥</h3>
-                    <p class="product-desc">その時のアイコンとファンマをモチーフに箱開けように作りました．もちろんひなたなので粒部分はセメント製．みんなよき粒箱でありますように．</p>
-                    <span class="product-tag">ピープル</span>
-                </div>
-            </div>
+.product-card {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-            <div class="product-card">
-                <img src="img/food/17.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメント餃子</h3>
-                    <p class="product-desc">さすがひなたというべきか．マジで普通にきれいな形で突っ込みどころがなさすぎるのでセメントにしときました．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
 
-            <div class="product-card">
-                <img src="img/food/18.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">たこ焼き晩酌</h3>
-                    <p class="product-desc">たこ焼き第二弾ですね．今回はお店で食べてるようです．てか勢い余ってグラスごとセメントに...おそろしいですね．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.product-image-placeholder {
+    width: 100%;
+    height: 240px;
+    background-color: var(--cement-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sub);
+}
 
-            <div class="product-card">
-                <img src="img/food/19.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントピザ</h3>
-                    <p class="product-desc">パンのピザ版ですね．当然これもセメントになりました．めでたしめでたし．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.product-info { padding: 20px; }
+.product-title { font-size: 1.1rem; font-weight: 500; margin-bottom: 8px; }
+.product-desc { font-size: 0.9rem; color: var(--text-sub); margin-bottom: 12px; }
+.product-tag {
+    display: inline-block;
+    background-color: var(--cement-light);
+    color: var(--cement-dark);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 2px;
+}
 
-            <div class="product-card">
-                <img src="img/food/20.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントチーズカレー</h3>
-                    <p class="product-desc">これタイトル読まずにわかった人います？こちらは職人自らいただいてるシーンがあるのでぜひご覧ください．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* --- タブ3: 商品購入ページ用スタイル --- */
+.shop-section {
+    background-color: var(--panel-bg);
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
 
-            <div class="product-card">
-                <img src="img/people/04.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントカレーを食べる職人</h3>
-                    <p class="product-desc">一個前の例のカレーですね．満面の笑みできっとすごいおいしかったんでしょうね．</p>
-                    <span class="product-tag">ピープル</span>
-                </div>
-            </div>
+.shop-intro { max-width: 600px; margin: 0 auto 40px auto; color: var(--text-sub); }
+.shop-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-            <div class="product-card">
-                <img src="img/food/21.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントしゃぶしゃぶ</h3>
-                    <p class="product-desc">これ奥の方だけなんか錆てるみたいな色になったんですけどこれもまた一興ということで．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.shop-button {
+    display: block;
+    padding: 20px;
+    background-color: var(--panel-bg);
+    border: 2px solid var(--cement-dark);
+    color: var(--cement-dark);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
 
-            <div class="product-card">
-                <img src="img/food/22.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントアイス</h3>
-                    <p class="product-desc">これって何味なんでしょうね．きっとセメント味だと思います！てことでセメントを食べたことある方、感想お待ちしております．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <img src="img/food/23.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントパン第二弾</h3>
-                    <p class="product-desc">うん、パンですよパン．最近パン作りすぎじゃね？</br>米も食え米も．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.shop-button:hover {
+    background-color: var(--cement-dark);
+    color: #ffffff;
+}
 
-            <div class="product-card">
-                <img src="img/food/24.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">マ〇クセット</h3>
-                    <p class="product-desc">あのマ〇クのセットですね．そろそろ怒られそうで怖いです．あとパッケージごとセメントに...もう職人超えてメデューサなのでは？？</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.shop-notice {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    text-align: left;
+}
 
-            <div class="product-card">
-                <img src="img/food/25.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメント餃子第二弾</h3>
-                    <p class="product-desc">一回目の試作が成功して量産したんでしょうか？みんなでDMまでねだりに行こうぜ．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.product-image {
+    width: 100%;
+    height: 240px; /* 前回のプレースホルダーと同じ高さ */
+    object-fit: cover; /* 画像の比率を保ったまま枠いっぱいに表示 */
+    border-bottom: 1px solid var(--border-color);
+}
 
-            <div class="product-card">
-                <img src="img/food/26.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">やらかしひなた</h3>
-                    <p class="product-desc">レンチンしたご飯を取り出そうとしたらめっちゃ熱くて手を放しちゃったらしいです．いやそらそうやろ、ポンコツなところも職人のチャームポイントですよね♪</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* プロフィール画像を丸く、枠いっぱいに表示する設定 */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 枠を丸くする */
+    overflow: hidden;    /* 枠からはみ出た画像を切る */
+    background-color: var(--cement-light); /* 画像がない時の背景色 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--panel-bg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);[cite: 3]
+}
 
-            <div class="product-card">
-                <img src="img/food/27.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントバレンタイン</h3>
-                    <p class="product-desc">師匠によるバレンタイン！！ちゃんと形を保ってて原点のセメントケーキとは大違いですね．てか普通にクオリティたけぇ、うまそうよこせ．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を歪ませずに枠にフィットさせる */
+}
 
-            <div class="product-card">
-                <img src="img/food/28.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ミ〇ド</h3>
-                    <p class="product-desc">なんかドーナツ食ってらあ、それにしてもこの量いけるのマジですげえワイ二個で死ぬ自信ある．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* SNSボタンの親要素（外枠） */
+.profile-sns {
+    border: 1px solid var(--border-color); /* 全体の外枠 */
+    background-color: var(--panel-bg);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 150px; /* 画像の幅に合わせる */
+    overflow: hidden; /* 角丸からはみ出すホバー背景をカット */
+}
 
-            <div class="product-card">
-                <img src="img/food/29.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントル〇ンド</h3>
-                    <p class="product-desc">ル〇ンドですね、これひなためっちゃお気に入りらしくて買い占めてるらしいです．売り切れてたらひなたのせいなのでクレームはひなたまで．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* ボタン自体の調整 */
+.sns-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 中身を中央揃えに */
+    gap: 6px; /* アイコンと文字の間隔をタイトに */
+    padding: 10px 0; /* 左右の余白を削り、上下だけで高さを調整 */
+    font-size: 1.0rem;
+    text-decoration: none;[cite: 3]
+    color: var(--cement-dark);
+    /* ボタン個別の枠線は削除して外枠と統合 */
+    border: none; 
+    border-bottom: 1px solid var(--border-color); /* ボタンの間の区切り線 */
+    transition: 0.2s;
+}
 
-            <div class="product-card">
-                <img src="img/food/30.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ケーキ屋さんのケーキ</h3>
-                    <p class="product-desc">変換する前はおいしそうなケーキでしたよ．てか普通にうまそうなもん食ってんなあ、よこせえええぇぇぇ．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* 最後のボタンだけ下の区切り線を消す */
+.sns-button:last-child {
+    border-bottom: none;
+}
 
-            <div class="product-card">
-                <img src="img/food/31.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">マ〇ク第二弾</h3>
-                    <p class="product-desc">例のごとくパッケージごと言ってますね．うちらの職人っていつからメデューサになってしまったんでしょうか？</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* ホバー演出（外枠とぴったり重なるように） */
+.sns-button:hover {
+    background-color: var(--cement-dark);
+    color: #ffffff;
+    /* transform: translateY は外枠からはみ出すので削除 */
+}
 
-            <div class="product-card">
-                <img src="img/food/32.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">ずぼら飯</h3>
-                    <p class="product-desc">一人暮らしあるあるのめんどいときに食べるインスタント三昧ですね．セメントにするとあら不思議！ぱっと見インスタントだって気づけませんね．</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
+/* アイコン画像のサイズ */
+.sns-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
 
-            <div class="product-card">
-                <img src="img/food/33.jpg" alt="セメント" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-title">セメントワッフル</h3>
-                    <p class="product-desc">これ説明いります？ワッフルですね．ｳﾝｳﾝ</p>
-                    <span class="product-tag">フード</span>
-                </div>
-            </div>
-            <!-- 他の商品カードも同様に配置 -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2026 プロの寝坊助ひなち🐣‪. All Rights Reserved.</p>
-    </footer>
-        <div id="imageModal" class="modal" onclick="this.style.display='none'">
-        <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-    </div>
+/* 拡大画面の背景 */
+.modal {
+    display: none; /* 最初は隠す */
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を暗くする */
+    align-items: center;
+    justify-content: center;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+/* 拡大される画像 */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    border: 3px solid #fff;
+    border-radius: 4px;
+}
+
+/* 閉じるボタン */
+.close {
+    position: absolute;
+    top: 20px; right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer { text-align: center; padding: 30px; color: var(--text-sub); font-size: 0.8rem; }
