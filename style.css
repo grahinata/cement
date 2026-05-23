@@ -372,4 +372,17 @@ h2 {
     cursor: pointer;
 }
 
+.profile-footer {
+    text-align: right;    /* 右寄せにする[cite: 3, 5] */
+    margin-top: 15px;     /* 文章との間に隙間を作る */
+}
+
+.update-date {
+    font-size: 0.9rem;      /* 小さすぎないサイズに変更 */
+    color: #666666;          /* 以前より少し濃い、読めるグレーに変更[cite: 3, 5] */
+    margin-left: 10px;
+    font-weight: 500;        /* ほんの少しだけ太くして視認性を上げる */
+    opacity: 0.8;            /* 透けさせすぎない[cite: 3] */
+}
+
 footer { text-align: center; padding: 30px; color: var(--text-sub); font-size: 0.8rem; }
