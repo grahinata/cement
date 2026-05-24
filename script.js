@@ -109,15 +109,3 @@ document.addEventListener('DOMContentLoaded', () => {
         img.addEventListener('click', () => openModal(img.src));
     });
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    displayPage(1); 
-    
-    // 全ての作品画像に lazy を一括で付ける
-    document.querySelectorAll('.product-image').forEach(img => {
-        img.setAttribute('loading', 'lazy'); // ここで一括付与
-        
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', () => openModal(img.src));
-    });
-});
