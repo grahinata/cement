@@ -461,7 +461,7 @@ h2 {
 
 .dot-btn {
     /* 数字ボタンと同じセメント背景とサイズを継承 */
-    background-image: url('img/cement_texture.jpg'); 
+    background-image: url('img/cement_texture.jpg'); /* 背景白くしたいけどつられてセメントになるからあえて存在しない画像を指定 */
     background-size: cover;
     opacity: 0.8; /* 少しだけ透けさせて「数字とは違う」ことを演出 */
     cursor: pointer;
