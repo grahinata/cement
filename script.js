@@ -90,22 +90,29 @@ function goToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function openModal(src) {
+// 拡大表示：引数にimg要素を直接受け取る
+function openModal(imgElement) {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
+    
+    // data-full属性があれば高画質JPG、なければWebPを表示
+    const fullSizeSrc = imgElement.getAttribute('data-full') || imgElement.src;
+
     if (modal && modalImg) {
         modal.style.display = "flex";
-        modalImg.src = src;
+        modalImg.src = fullSizeSrc;
     }
 }
 
-// --- 4. 実行の合図 [source: 8] ---
+// --- 4. 実行の合図 ---
 document.addEventListener('DOMContentLoaded', () => {
+    // 最初のページを表示
     displayPage(1); 
     
-    // 画像クリックで拡大する設定もここで一括登録
+    // 全ての作品画像に一括でイベントを登録
     document.querySelectorAll('.product-image').forEach(img => {
         img.style.cursor = 'pointer';
-        img.addEventListener('click', () => openModal(img.src));
+        // 要素そのものを渡すように修正
+        img.addEventListener('click', () => openModal(img));
     });
 });
