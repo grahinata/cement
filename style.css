@@ -26,7 +26,7 @@ body {
 /* ヘッダーデザイン */
 header {
     /* 画像を背景に指定し、中央に配置して全体を覆う設定 */
-    background: url('img/marble.jpg') no-repeat center center;
+    background: url('img/marble.webp') no-repeat center center;
     background-size: cover; 
     
     border-bottom: 2px solid var(--border-color);
@@ -404,7 +404,7 @@ h2 {
     border: 1px solid #999;
 
     /* セメントの画像を指定（パスは自分の環境に合わせて調整してください） */
-    background-image: url('img/cement.jpg'); 
+    background-image: url('img/cement.webp'); 
     background-size: cover;
     background-position: center;
     
@@ -427,7 +427,7 @@ h2 {
 
 .page-btn.active {
     /* 1. 背景のセメント画像はそのまま、明度を下げないように設定 */
-    background-image: url('img/cement.jpg') !important;
+    background-image: url('img/cement.webp') !important;
     
     /* 2. 文字色を完全に白にするか、視認性を高めるために調整 */
     color: #ffffff !important;
@@ -449,7 +449,7 @@ h2 {
     height: 100%;
     /* transform: translate は不要になるので削除 */
     
-    background-image: url('img/food/top.jpg'); 
+    background-image: url('img/food/top.webp'); 
     background-size: cover;
     background-position: center;
     
@@ -461,7 +461,7 @@ h2 {
 
 .dot-btn {
     /* 数字ボタンと同じセメント背景とサイズを継承 */
-    background-image: url('img/none.jpg'); /* 背景白くしたいけどつられてセメントになるからあえて存在しない画像を指定 */
+    background-image: url('img/none.webp'); /* 背景白くしたいけどつられてセメントになるから空白のダミー画像を指定 */
     background-size: cover;
     opacity: 0.8; /* 少しだけ透けさせて「数字とは違う」ことを演出 */
     cursor: pointer;
